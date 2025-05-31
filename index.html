@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shameem Auto Electrical</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #e6f7ff, #b3e5fc);
+      color: #002244;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #003366;
+      padding: 15px;
+      text-align: center;
+      color: #00eaff;
+      font-size: 1.8em;
+      text-shadow: 0 0 10px #00eaff, 0 0 20px #00f7ff;
+      position: relative;
+      z-index: 1;
+    }
+
+    .intro-shutter {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #001f3f, #003366);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      animation: shutterClose 2s forwards;
+      animation-delay: 3.5s;
+    }
+    .intro-shutter h1 {
+      color: #00eaff;
+      font-size: 2.5rem;
+      text-align: center;
+      text-shadow: 0 0 15px #00eaff, 0 0 25px #00f7ff;
+      animation: glowPulse 2s infinite;
+    }
+
+    @keyframes glowPulse {
+      0% { text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff; }
+      50% { text-shadow: 0 0 25px #00f7ff, 0 0 35px #00f7ff; }
+      100% { text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff; }
+    }
+
+    @keyframes shutterClose {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-100%); visibility: hidden; }
+    }
+
+    .content {
+      opacity: 0;
+      padding: 20px;
+      animation: popupIn 1s ease forwards;
+      animation-delay: 4s;
+    }
+
+    .section {
+      margin: 40px 0;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 2em;
+      color: #003366;
+      text-shadow: 0 0 5px #00eaff, 0 0 10px #00f7ff;
+      margin-bottom: 20px;
+    }
+    .image-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .image-grid img {
+      width: 220px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .image-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+    iframe {
+      width: 90%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #001f3f;
+      color: #00f7ff;
+      font-weight: bold;
+      text-shadow: 0 0 10px #00f7ff, 0 0 15px #00eaff;
+      font-size: 1em;
+    }
+
+    @keyframes popupIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="intro-shutter" id="shutter">
+    <h1>Welcome to Shameem Electrical Shop</h1>
+  </div>
+
+  <header>
+    Shameem Auto Electrical
+  </header>
+
+  <div class="content" id="mainContent">
+    <div class="section">
+      <h2>Our Products & Services</h2>
+      <div class="image-grid">
+        <img src="/mnt/data/images%20(1).jfif" alt="Battery Repairing">
+        <img src="/mnt/data/images.jfif" alt="Inverter Battery">
+        <img src="/mnt/data/ai-generated-8942784_640.jpg" alt="Solar Panel">
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Visit Us</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14138.084544216368!2d78.74342502513215!3d28.619538550062526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390b50ff22a243b3%3A0x6ae90864de0d31a1!2sBilari%2C%20Uttar%20Pradesh%20244521!5e0!3m2!1sen!2sin!4v1685177236952!5m2!1sen!2sin" allowfullscreen loading="lazy"></iframe>
+    </div>
+
+    <footer>
+      💡 Designed & Developed by <span style="color:#00ffff;">Mashroor</span>
+    </footer>
+  </div>
+</body>
+</html>
